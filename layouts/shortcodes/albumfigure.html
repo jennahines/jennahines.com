@@ -1,0 +1,17 @@
+{{- $pathURL := .Get "pathURL" -}}
+{{- $path := .Get "path" -}}
+{{- $files := readDir $path -}}
+
+
+{{- range $files }}
+
+  {{if not (eq .Name ".DS_Store") }}
+    <figure>
+      <a href="{{ $pathURL }}{{ .Name | relURL }}" target="_blank">
+        <img src="{{ $pathURL }}{{ .Name | relURL }}" alt="">
+        <figcaption>{{ .Name }}</figcaption>
+      </a>
+    </figure>
+  {{end}}
+
+{{- end }}

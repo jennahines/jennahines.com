@@ -1,0 +1,6 @@
+baseURL          = "http://localhost:1313/"
+disableKinds      =["RSS", "sitemap"]
+languageCode     = "en-us"
+title            = "Jenna Hines"
+relativeURLs     = true
+sectionPagesMenu = "main"

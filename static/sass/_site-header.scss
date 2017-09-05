@@ -1,0 +1,50 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .6rem;
+}
+
+.site-logo {
+  svg {
+    height: 100px;
+  }
+  path {
+    color: $seagreen;
+    & + path {
+      color: $darkgray;
+    }
+    & + path + path {
+      color: $seagreen;
+    }
+  }
+}
+
+.site-nav {
+  &__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style-type: none;
+    text-align: right;
+  }
+  &__item {
+    display: block;
+    margin-left: 1rem;
+  }
+  &__link {
+    padding: .2rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    font-size: .8rem;
+  }
+  &__item--active &__link {
+    color: darken($seagreen, 20%);
+    border-bottom-color: $macncheese;
+  }
+  @media screen and (min-width: 30rem) {
+    &__item {
+      display: inline-block;
+    }
+  }
+}

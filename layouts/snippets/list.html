@@ -1,0 +1,15 @@
+{{ partial "header.html" . }}
+
+<header>
+  {{ .Content }}
+</header>
+
+<ul class="articles-list">
+    <!-- Ranges through content/blog/*.md -->
+    {{ range first 10 .Data.Pages }}
+    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ul>
+ 
+{{ partial "footer.html" . }}
+

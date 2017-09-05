@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+
+<header class="section-header">
+  {{ .Content }}
+</header>
+
+<section class="gallery gallery--archive">
+  {{ range .Data.Pages }}
+    <figure>
+      <a href="{{ .RelPermalink }}">
+        <img src="{{ .Params.FeaturedImage }}" alt="">
+        <figcaption>{{ .Title }}</figcaption>
+      </a>
+    </figure>
+  {{ end }}
+</section>  
+
+{{ partial "footer.html" . }}
+
