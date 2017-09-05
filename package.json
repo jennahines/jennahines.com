@@ -10,19 +10,12 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.4.0",
-    //"browser-sync": "^2.18.13",
-    //"del": "^3.0.0",
     "gulp": "^3.9.1",
-    //"gulp-cache": "^0.4.6",
-    //"gulp-imagemin": "^3.3.0",
     "gulp-notify": "^3.0.0",
     "gulp-plumber": "^1.0.1",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^3.1.0",
     "gulp-util": "^3.0.6",
     "run-sequence": "^2.1.0"
-  },
-  //"dependencies": {
-  //  "gulp-uglifycss": "^1.0.8"
-  //}
+  }
 }
