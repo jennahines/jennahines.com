@@ -97,11 +97,11 @@ body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "S
 
 .section-header p { font-size: 1.2rem; font-weight: 300; color: #62625b; }
 
-.hero { width: 100vw; position: relative; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); height: 80vh; background-image: url("http://res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_768/hot-air-balloon/1_tbgv6g.jpg"); background-size: cover; background-position: center; }
+.hero { width: 100vw; position: relative; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); height: 80vh; background-image: url("//res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_768/hot-air-balloon/1_tbgv6g.jpg"); background-size: cover; background-position: center; }
 
 .hero::before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; right: 0; background: rgba(247, 247, 247, 0.6); }
 
-@media screen and (min-width: 768px) { .hero { background-image: url("http://res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_1500/hot-air-balloon/1_tbgv6g.jpg"); } }
+@media screen and (min-width: 768px) { .hero { background-image: url("//res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_1500/hot-air-balloon/1_tbgv6g.jpg"); } }
 
 .hero__content { padding: 4vw; max-width: 40rem; margin: auto; position: relative; z-index: 1; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); text-align: center; }
 

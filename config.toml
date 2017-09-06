@@ -6,4 +6,4 @@ relativeURLs     = true
 sectionPagesMenu = "main"
 
 [params]
-    cloudinary = "http://res.cloudinary.com/jennahines/image/upload"
+    cloudinary = "//res.cloudinary.com/jennahines/image/upload"

@@ -106,7 +106,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   height: 80vh;
-  background-image: url('http://res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_768/hot-air-balloon/1_tbgv6g.jpg');
+  background-image: url('//res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_768/hot-air-balloon/1_tbgv6g.jpg');
   background-size: cover;
   background-position: center;
   &::before {
@@ -119,7 +119,7 @@ body {
     background: rgba($white, .6);
   }
   @media screen and (min-width: 768px) {
-    background-image: url('http://res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_1500/hot-air-balloon/1_tbgv6g.jpg');
+    background-image: url('//res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_1500/hot-air-balloon/1_tbgv6g.jpg');
   }
   &__content {
     padding: 4vw;
