@@ -47,13 +47,32 @@ body {
   grid-gap: 1rem;
 
   figure {
-    padding: 2px;
-    border: 1px solid lighten($darkgray, 70%);
+    
   }
   figcaption {
     font-size: .8rem;
     font-weight: 200;
     color: lighten($darkgray, 30%);
+    transition: color .2s;
+  }
+  img {
+    transition: all .3s;
+    transition-delay: .1s;
+  }
+  a {
+    display: block;
+    padding: 2px;
+    border: 1px solid lighten($darkgray, 70%);
+    transition: box-shadow .2s;
+  }
+  a:hover {
+    box-shadow: 0 0 13px 3px rgba($darkgray, .1);
+  }
+  a:hover img {
+    transform: scale(1.021);
+  }
+  a:hover figcaption {
+    color: $seagreen;
   }
 }
 
