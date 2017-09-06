@@ -1,14 +1,21 @@
 +++
-title = "Hot Air Balloon"
-date = 2017-09-04T21:49:46-04:00
+title = "Hot Air Balloon Ride"
+date = 2017-09-04T10:32:46-04:00
 draft = false
-description = ""
-featuredImage = "/images/hot-air-balloon/1.jpg"
+description = "" 
 location = ""
+albumfolder = "hot-air-balloon"
+featuredimage = "1_tbgv6g.jpg"
 +++
-<header class="section-header">
-# Hot Air Balloon <small>September 2015</small>
-</header>
-<section class="gallery">
-  {{< albumfigure path="/static/images/hot-air-balloon" pathURL="/images/hot-air-balloon" >}}  
-</section>
+{{< sectionheader 
+    title="Hot Air Balloon Ride" 
+    date="Septempber 2015"
+    description="Celebrating 30 years."
+    >}}
+{{< albumwrapper >}}
+{{% albumfigure file="2_do7y5w.jpg" caption="Balloon Shadow" %}}
+{{% albumfigure file="5_ifnxe0.jpg" caption="View from above" %}}
+{{% albumfigure file="3_qcjk8l.jpg" caption="Sunrise from the clouds" %}}
+{{% albumfigure file="4_ezppuj.jpg" caption="Morning fog" %}}
+
+{{< /albumwrapper >}}

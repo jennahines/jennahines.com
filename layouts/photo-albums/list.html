@@ -1,19 +1,20 @@
 {{ partial "header.html" . }}
 
-<header class="section-header">
-  {{ .Content }}
-</header>
+{{ .Content }}
 
-<section class="gallery gallery--archive">
+<section class="gallery">
   {{ range .Data.Pages }}
     <figure>
       <a href="{{ .RelPermalink }}">
-        <img src="{{ .Params.FeaturedImage }}" alt="">
-        <figcaption>{{ .Title }}</figcaption>
+        <img src="{{ $.Site.Params.cloudinary }}/t_thumb/{{ .Params.albumfolder }}/{{ .Params.featuredimage }}" alt="{{ .Title }}">
+        <figcaption>
+          {{ .Title }}
+        </figcaption>
       </a>
     </figure>
   {{ end }}
-</section>  
+</section>
+
 
 {{ partial "footer.html" . }}
 

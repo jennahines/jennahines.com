@@ -4,3 +4,6 @@ languageCode     = "en-us"
 title            = "Jenna Hines"
 relativeURLs     = true
 sectionPagesMenu = "main"
+
+[params]
+    cloudinary = "http://res.cloudinary.com/jennahines/image/upload"

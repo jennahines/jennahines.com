@@ -1,17 +1,10 @@
-{{- $pathURL := .Get "pathURL" -}}
-{{- $path := .Get "path" -}}
-{{- $files := readDir $path -}}
-
-
-{{- range $files }}
-
-  {{if not (eq .Name ".DS_Store") }}
-    <figure>
-      <a href="{{ $pathURL }}{{ .Name | relURL }}" target="_blank">
-        <img src="{{ $pathURL }}{{ .Name | relURL }}" alt="">
-        <figcaption>{{ .Name }}</figcaption>
-      </a>
-    </figure>
-  {{end}}
-
-{{- end }}
+{{ $albumfolder := .Page.Params.albumfolder }}
+<figure itemscope itemtype="http://schema.org/ImageObject">
+  <!-- <a href="{{ $.Site.Params.cloudinary }}/t_large/{{ $albumfolder }}/{{ .Get "file" }}" itemprop="contentUrl" data-size="{{ .Get "size" }}"> -->
+    <img src="{{ $.Site.Params.cloudinary }}/t_thumb/{{ $albumfolder }}/{{ .Get "file" }}" itemprop="thumbnail" alt="{{ .Get "caption" }}">
+  
+    <figcaption itemprop="caption description">
+      {{ .Get "caption" }}
+    </figcaption>
+  <!-- </a> -->
+</figure>

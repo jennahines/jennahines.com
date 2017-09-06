@@ -1,0 +1,14 @@
+<header class="section-header">
+
+  <h1>
+    {{ .Get "title" }}
+    {{ with .Get "date" }}
+      <small>{{.}}</small>
+    {{ end }}
+  </h1>
+
+  {{ with .Get "description" }}
+    <p>{{.}}</p>
+  {{ end }}
+
+</header>
