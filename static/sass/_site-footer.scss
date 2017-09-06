@@ -1,8 +1,31 @@
 .site-footer {
   padding-top: 2rem;
   padding-bottom: 2rem;
+  
   p {
     color: lighten($darkgray, 20%);
     margin-bottom: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  li {
+    display: inline-block;
+    margin: 0 .5rem;
+    a {
+      display: block;
+    }
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $seagreen;
+      transition: fill .3s;
+    }
+    a:hover svg {
+      fill: darken($seagreen, 20%);
+    }
   }
 }
