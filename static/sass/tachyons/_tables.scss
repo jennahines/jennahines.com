@@ -1,0 +1,22 @@
+/*
+
+  Docs: http://tachyons.io/docs/elements/tables/
+
+*/
+
+.collapse {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.striped--nearwhite:nth-child(odd) {
+  background-color: $nearwhite;
+}
+
+.stripe-light:nth-child(odd) {
+  background-color: $white-10;
+}
+
+.stripe-dark:nth-child(odd) {
+  background-color: $black-10;
+}

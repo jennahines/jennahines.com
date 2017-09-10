@@ -1,14 +1,14 @@
-<header class="section-header">
+<header class="section-header measure-wide">
 
-  <h1>
+  <h1 class="f1 f-subheadline-ns relative lh-solid">
     {{ .Get "title" }}
     {{ with .Get "date" }}
-      <small>{{.}}</small>
+      <small class="f4 gray ttu fw3">{{.}}</small>
     {{ end }}
   </h1>
 
   {{ with .Get "description" }}
-    <p>{{.}}</p>
+    <p class="f4 fw3 gray">{{.}}</p>
   {{ end }}
 
 </header>

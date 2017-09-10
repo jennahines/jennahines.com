@@ -4,10 +4,10 @@
 
 <section class="gallery">
   {{ range .Data.Pages }}
-    <figure>
-      <a href="{{ .RelPermalink }}">
+    <figure class="ma0">
+      <a class="db pa1 ba b--nearwhite gray hover-seagreen" href="{{ .RelPermalink }}">
         <img src="{{ $.Site.Params.cloudinary }}/t_thumb/{{ .Params.albumfolder }}/{{ .Params.featuredimage }}" alt="{{ .Title }}">
-        <figcaption>
+        <figcaption class="tc f6 fw2 pa3">
           {{ .Title }}
         </figcaption>
       </a>

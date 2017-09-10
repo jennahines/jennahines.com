@@ -1,0 +1,19 @@
+/*
+
+   GRADIENTS
+
+*/
+
+.gradient-seagreen-dark { 
+  background-image: linear-gradient($seagreen, darken($seagreen, 20%));
+}
+.gradient-seagreen-light { 
+  background-image: linear-gradient($seagreen, lighten($seagreen, 20%));
+}
+
+.gradient-seagreen-dark-reversed { 
+  background-image: linear-gradient(darken($seagreen, 20%), $seagreen);
+}
+.gradient-seagreen-light-reversed { 
+  background-image: linear-gradient(lighten($seagreen, 20%), $seagreen);
+}
