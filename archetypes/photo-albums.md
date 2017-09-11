@@ -13,5 +13,6 @@ featuredimage = ""
     description=""
     >}}
 {{< albumwrapper >}}
-{{% albumfigure file="" caption="" %}}
+{{% albumfigure file="" size="1400x996" caption="" %}}
 {{< /albumwrapper >}}
+{{% galleryinit %}}

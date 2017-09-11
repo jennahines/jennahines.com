@@ -13,7 +13,8 @@ featuredimage = "1_aonymr.jpg"
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ubi ut eam caperet aut quando? Tu autem, si tibi illa probabantur, cur non propriis verbis ea tenebas? Primum in nostrane potestate est."
     >}}
 {{< albumwrapper >}}
-{{% albumfigure file="3_hj7vyj.jpg" caption="Sunset" %}}
-{{% albumfigure file="6_mz7g5x.jpg" caption="Sunset" %}}
-{{% albumfigure file="4_fzkx9c.jpg" caption="Coast" %}}
+{{% albumfigure file="3_hj7vyj.jpg" size="1400x996" caption="Sunset" %}}
+{{% albumfigure file="6_mz7g5x.jpg" size="1400x996" caption="Sunset" %}}
+{{% albumfigure file="4_fzkx9c.jpg" size="1400x996" caption="Coast" %}}
 {{< /albumwrapper >}}
+{{% galleryinit %}}

@@ -13,7 +13,8 @@ featuredimage = "6_qdcyrv.jpg"
     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ubi ut eam caperet aut quando? Tu autem, si tibi illa probabantur, cur non propriis verbis ea tenebas? Primum in nostrane potestate est."
     >}}
 {{< albumwrapper >}}
-{{% albumfigure file="2_ccun1m.jpg" caption="Flowers" %}}
-{{% albumfigure file="7_xs8l9g.jpg" caption="Tulip Fields" %}}
-{{% albumfigure file="5_hcrdnj.jpg" caption="Flowers" %}}
+{{% albumfigure file="2_ccun1m.jpg" size="1400x996" caption="Flowers" %}}
+{{% albumfigure file="7_xs8l9g.jpg" size="1400x996" caption="Tulip Fields" %}}
+{{% albumfigure file="5_hcrdnj.jpg" size="1400x2108" caption="Flowers" %}}
 {{< /albumwrapper >}}
+{{% galleryinit %}}

@@ -13,9 +13,9 @@ featuredimage = "1_tbgv6g.jpg"
     description="Celebrating 30 years."
     >}}
 {{< albumwrapper >}}
-{{% albumfigure file="2_do7y5w.jpg" caption="Balloon Shadow" %}}
-{{% albumfigure file="5_ifnxe0.jpg" caption="View from above" %}}
-{{% albumfigure file="3_qcjk8l.jpg" caption="Sunrise from the clouds" %}}
-{{% albumfigure file="4_ezppuj.jpg" caption="Morning fog" %}}
-
+{{% albumfigure file="2_do7y5w.jpg" size="1400x996" caption="Balloon Shadow" %}}
+{{% albumfigure file="5_ifnxe0.jpg" size="1400x996" caption="View from above" %}}
+{{% albumfigure file="3_qcjk8l.jpg" size="1400x996" caption="Sunrise from the clouds" %}}
+{{% albumfigure file="4_ezppuj.jpg" size="1400x996" caption="Morning fog" %}}
 {{< /albumwrapper >}}
+{{% galleryinit %}}

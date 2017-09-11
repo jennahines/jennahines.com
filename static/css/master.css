@@ -3154,6 +3154,8 @@ img { max-width: 100%; }
 /* Text that is hidden but accessible Ref: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
 .clip { position: fixed !important; _position: absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); }
 
+.clip:focus { clip: auto; }
+
 @media screen and (min-width: 30em) { .clip-ns { position: fixed !important; _position: absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); } }
 
 @media screen and (min-width: 30em) and (max-width: 60em) { .clip-m { position: fixed !important; _position: absolute !important; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); } }
@@ -3370,7 +3372,9 @@ a:hover { color: #446051; }
 
 .gallery a { transition: box-shadow .2s; }
 
-.section-header h1::after { content: ''; display: block; width: 86%; height: .3rem; background-color: rgba(255, 210, 137, 0.45); position: absolute; bottom: .3rem; left: -3%; z-index: -1; }
+.gallery--archive { -ms-grid-columns: (minmax(calc(200px - 2rem), 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(calc(200px - 2rem), 1fr)); }
+
+.section-header h1::after { content: ''; display: block; width: 100%; height: .3rem; background-color: rgba(255, 210, 137, 0.45); position: absolute; bottom: .3rem; left: -3%; z-index: -1; }
 
 @media screen and (min-width: 30em) { .section-header h1 { font-size: 3.2rem; }
   .section-header h1::after { height: .5rem; bottom: .5rem; } }
