@@ -1,3 +1,4 @@
+@import '__vars.scss';
 @import 'tachyons/tachyons';
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,77 +26,9 @@ a {
   }
 }
 
-
-.site-logo {
-  svg {
-    height: 100px;
-  }
-  path {
-    color: $seagreen;
-    & + path {
-      color: $darkgray;
-    }
-    & + path + path {
-      color: $seagreen;
-    }
-  }
-}
-
-
-.site-nav {
-  &__item--active &__link {
-    color: darken($seagreen, 20%);
-    border-bottom-color: $macncheese;
-  }
-  @media #{$breakpoint-not-small} {
-    &__item {
-      display: inline-block;
-    }
-  }
-}
-
-
-.site-footer {
-  li {
-    svg {
-      fill: $seagreen;
-      transition: fill .3s;
-    }
-    a:hover svg {
-      fill: darken($seagreen, 20%);
-    }
-  }
-}
-
-
-.container {
-  width: 100%;
-  max-width: 80rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(calc(300px - 2rem), 1fr));
-  grid-gap: 1rem;
-  figcaption {
-    transition: color .2s;
-  }
-  a {
-    transition: box-shadow .2s;
-  }
-  a:hover {
-    @extend .shadow-1;
-  }
-
-  &--archive {
-    grid-template-columns: repeat(auto-fill, minmax(calc(200px - 2rem), 1fr));
-  }
-}
+// ==========================================================================
+//  PAGE HEADERS
+// ==========================================================================
 
 .section-header {
   h1 {
@@ -121,6 +54,60 @@ a {
 }
 
 
+// ==========================================================================
+//  SITE LAYOUT
+// ==========================================================================
+.site-wrapper {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr minmax(calc(320px - 2rem), 80em) 1fr;
+  grid-template-areas: 
+    ". header ."
+    ". main ."
+    ". footer .";
+}
+.site-header {
+  grid-area: header;
+}
+.site-content {
+  grid-area: main;
+}
+.site-footer {
+  grid-area: footer;
+}
+
+
+// .container {
+//   width: 100%;
+//   // max-width: 80rem;
+//   // margin-left: auto;
+//   // margin-right: auto;
+//   padding-left: 1rem;
+//   padding-right: 1rem;
+// }
+
+
+// ==========================================================================
+//  GALLERY 
+// ==========================================================================
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  figcaption {
+    transition: color .2s;
+  }
+  a {
+    transition: box-shadow .2s;
+  }
+  a:hover {
+    @extend .shadow-1;
+  }
+}
+
+
+
 
 // ==========================================================================
 //  HOMEPAGE
@@ -130,6 +117,11 @@ a {
   left: 50%;
   transform: translateX(-50%);
   background-image: url('//res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_768/hot-air-balloon/1_tbgv6g.jpg');
+
+  display: grid;
+  place-items: center center;
+
+
   &::before {
     content: '';
     position: absolute;
@@ -137,13 +129,22 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba($white, .6);
+    background: linear-gradient(to right, rgba($macncheese, .7), rgba($seagreen, .7));
   }
   @media screen and (min-width: 768px) {
     background-image: url('//res.cloudinary.com/jennahines/image/upload/c_scale,q_auto:good,w_1500/hot-air-balloon/1_tbgv6g.jpg');
   }
   &__content {
-    top: 50%;
-    transform: translateY(-50%);
+    // background: rgba($white, .2);
+    color: $white;
+    text-shadow: 0 1px 1px rgba($black, .7);
+    .btn {
+      text-shadow: none;
+    }
   }
 }
+
+
+
+@import '_site-header.scss';
+@import '_site-footer.scss';

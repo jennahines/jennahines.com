@@ -1,0 +1,12 @@
+
+.site-footer {
+  li {
+    svg {
+      fill: $seagreen;
+      transition: fill .3s;
+    }
+    a:hover svg {
+      fill: darken($seagreen, 20%);
+    }
+  }
+}

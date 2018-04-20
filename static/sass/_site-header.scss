@@ -1,0 +1,166 @@
+.site-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logo nav";
+  align-items: center;
+  
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+// ==========================================================================
+//  LOGO
+// ==========================================================================
+
+.site-logo {
+  justify-self: start;
+  grid-area: logo;
+
+  svg {
+    height: 100px;
+  }
+  path {
+    color: $seagreen;
+    & + path {
+      color: $darkgray;
+    }
+    & + path + path {
+      color: $seagreen;
+    }
+  }
+}
+
+
+// ==========================================================================
+//  NAV
+// ==========================================================================
+
+.site-nav {
+  grid-column: 1 / -1;
+  text-align: center;
+
+  transition: all $speed_fast;
+  &__item--active &__link {
+    color: darken($seagreen, 20%);
+    border-bottom-color: $macncheese;
+  }
+
+  @media #{$breakpoint-not-small} {
+    grid-area: nav;
+    text-align: right;
+
+    &__item {
+      display: inline-block;
+    }
+  }
+
+}
+
+[aria-expanded="false"] + .site-nav {
+  transform: rotateX(90deg);
+  height: 0;
+}
+
+[aria-hidden="true"] + .site-nav,
+[aria-expanded="true"] + .site-nav {
+  transform: rotateX(0);
+  height: auto;
+}
+
+// ==========================================================================
+//  NAV TOGGLE
+// ==========================================================================
+.site-nav-toggle {
+  @media #{$breakpoint-not-small} {
+    display: none;
+  }
+}
+.toggle {
+  
+  &__line {
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke: $seagreen;
+    transition: transform $speed_fast $cubic_bezier,
+                opacity $speed_fast $cubic_bezier;
+    
+  }
+  
+
+  //when nav is hidden (the hamburger state)
+  &__line--top,
+  &--nav-is-closed &__line--top {
+    transform-origin: 20px 10px;
+    animation: navToggleTop--closed $speed_slow $cubic_bezier 1 forwards;
+  }
+  
+  &__line--bottom,
+  &--nav-is-closed &__line--bottom {
+    transform-origin: 20px 30px;
+    animation: navToggleBottom--closed $speed_slow $cubic_bezier 1 forwards;
+  }
+  
+  
+  //when nav is open (the X state)
+  &--nav-is-open &__line--top {
+    animation: navToggleTop--open $speed_slow $cubic_bezier 1 forwards;
+  }
+  &--nav-is-open &__line--bottom {
+    animation: navToggleBottom--open $speed_slow $cubic_bezier 1 forwards;
+  }
+  &--nav-is-open &__line--middle {
+    opacity: 0;
+  }
+  
+}
+
+
+//animations 
+@keyframes navToggleTop--open {
+  0% {
+    transform: none;
+  }
+  50% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(10px) rotate(45deg);
+  }
+}
+@keyframes navToggleTop--closed {
+  0% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  50% {
+      transform: translateY(10px) rotate(0);
+  }
+  100% {
+      transform: translateY(0) rotate(0);
+  }
+}
+
+
+@keyframes navToggleBottom--open {
+  0% {
+    transform: none;
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+  100% {
+      transform: translateY(-10px) rotate(-45deg);
+  }
+}
+@keyframes navToggleBottom--closed {
+  0% {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  50% {
+      transform: translateY(-10px) rotate(0);
+  }
+  100% {
+      transform: translateY(0) rotate(0);
+  }
+}

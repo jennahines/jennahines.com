@@ -11,24 +11,40 @@
   
   <link rel="stylesheet" href="/css/master.css">
 </head>
-<body class="ma0 pa0 sans-serif fw4 darkgray tracked lh-copy bg-white">
+<body class="ma0 ph0 pv2 sans-serif fw4 darkgray tracked lh-copy bg-nearwhite">
 
   <a href="#content" class="clip">Skip to main content</a>
 
-  <header class="site-header container flex justify-between items-center pa2">
-    <a href="/" class="site-logo">{{ readFile "public/images/jh-logo.svg" | safeHTML }}</a>
+  <div class="site-wrapper">
 
-    <nav class="site-nav">
-      <ul class="site-nav__list mt0 mb0 pl0 list tr">
-        
-        {{ range .Site.Menus.main }}
-          <li class="site-nav__item db dib-ns mt3 mb3 {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} site-nav__item--active{{end}}">
-            <a class="site-nav__link pa1 ttu bb b--transparent f6" href="{{.URL}}">{{ .Name }}</a>
-          </li>
-        {{ end }}
-      </ul>
-    </nav>
-  </header>
-  
+    <header class="site-header bg-nearwhite" header role="banner">
 
-  <main id="content" class="site-content container"> 
+      <a href="/" class="site-logo">{{ readFile "public/images/jh-logo.svg" | safeHTML }}</a>
+      
+      <a id="site-nav-toggle" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" aria-hidden="false">
+        <span aria-hidden="true">
+          <svg class="toggle toggle--nav-is-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+            <line class="toggle__line toggle__line--top" x1="3" y1="10" x2="37" y2="10"></line>
+            <line class="toggle__line toggle__line--middle" x1="3" y1="20" x2="37" y2="20"></line>
+            <line class="toggle__line toggle__line--bottom" x1="3" y1="30" x2="37" y2="30"></line>
+          </svg>
+        </span>
+      </a>
+
+      <nav id="site-nav" class="site-nav" role="navigation" aria-hidden="true" aria-labelledby="site-nav-toggle">
+
+        <ul class="site-nav__list mt0 mb0 pl0 list">
+          {{ range .Site.Menus.main }}
+            <li class="site-nav__item mt3 mb3 {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} site-nav__item--active{{end}}">
+              <a class="site-nav__link pa1 ttu bb b--transparent f6" {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}aria-current="page"{{end}} href="{{.URL}}">{{ .Name }}</a>
+            </li>
+          {{ end }}
+        </ul>
+
+      </nav>
+
+
+    </header>
+    
+
+    <main id="content" class="site-content" main role="main"> 

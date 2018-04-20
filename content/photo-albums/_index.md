@@ -6,5 +6,5 @@ weight = 1
 +++
 {{< sectionheader 
     title="All Albums" 
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo adhuc, quantum equidem intellego, causa non videtur fuisse mutandi nominis. Itaque eos id agere, ut a se dolores, morbos, debilitates repellant. "
+    description="my adventures and the things I love"
     >}}
