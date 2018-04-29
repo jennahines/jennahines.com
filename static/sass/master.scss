@@ -76,25 +76,23 @@ a {
   grid-area: footer;
 }
 
-
-// .container {
-//   width: 100%;
-//   // max-width: 80rem;
-//   // margin-left: auto;
-//   // margin-right: auto;
-//   padding-left: 1rem;
-//   padding-right: 1rem;
-// }
-
-
 // ==========================================================================
 //  GALLERY 
 // ==========================================================================
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-gap: 1rem;
+  justify-items: center;
+  
+  @media #{$breakpoint-not-small} {
+    &--archive {
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    }
+  }
+  
+
   figcaption {
     transition: color .2s;
   }

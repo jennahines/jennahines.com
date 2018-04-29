@@ -21,3 +21,4 @@ featuredimage = "1_aonymr.jpg"
 {{% albumfigure file="4_fzkx9c.jpg" size="1400x996" caption="Coast" %}}
 {{< /albumwrapper >}}
 {{% galleryinit %}}
+{{% lazyload %}}

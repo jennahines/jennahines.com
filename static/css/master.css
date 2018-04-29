@@ -3361,7 +3361,9 @@ a:hover { color: #446051; }
 
 .site-footer { grid-area: footer; }
 
-.gallery { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(300px, 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); grid-gap: 1rem; }
+.gallery { display: -ms-grid; display: grid; -ms-grid-columns: (minmax(290px, 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); grid-gap: 1rem; -ms-grid-column-align: center; justify-items: center; }
+
+@media screen and (min-width: 30em) { .gallery--archive { -ms-grid-columns: (minmax(400px, 1fr))[auto-fill]; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); } }
 
 .gallery figcaption { transition: color .2s; }
 

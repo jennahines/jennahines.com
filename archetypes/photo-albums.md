@@ -16,3 +16,4 @@ featuredimage = ""
 {{% albumfigure file="" size="1400x996" caption="" %}}
 {{< /albumwrapper >}}
 {{% galleryinit %}}
+{{% lazyload %}}

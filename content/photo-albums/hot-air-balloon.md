@@ -19,3 +19,4 @@ featuredimage = "1_tbgv6g.jpg"
 {{% albumfigure file="4_ezppuj.jpg" size="1400x996" caption="Morning fog" %}}
 {{< /albumwrapper >}}
 {{% galleryinit %}}
+{{% lazyload %}}
