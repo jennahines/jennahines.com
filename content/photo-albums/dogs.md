@@ -18,5 +18,3 @@ featuredimage = "1_dygpby.jpg"
 {{% albumfigure file="DSC_5687.jpg" size="1400x996" caption="Adult Dakota" %}}
 {{% albumfigure file="jake-snow.jpg" size="1250x830" caption="Jake in the snow" %}}
 {{< /albumwrapper >}}
-{{% galleryinit %}}
-{{% lazyload %}}

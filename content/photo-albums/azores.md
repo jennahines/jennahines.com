@@ -29,7 +29,4 @@ featuredimage = "9_zq5unj.jpg"
 {{% albumfigure file="5_kyymd0.jpg" size="1400x996" caption="The elevation" %}}
 {{% albumfigure file="DSC_3187.jpg" size="1400x996" caption="These views" %}}
 {{% albumfigure file="6_ovpnst.jpg" size="1400x996" caption="Bee" %}}
-
 {{< /albumwrapper >}}
-{{% galleryinit %}}
-{{% lazyload %}}

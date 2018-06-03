@@ -8,5 +8,3 @@ weight = 1
     title="All Albums" 
     description="my adventures and the things I love"
     >}}
-
-{{% lazyload %}}

@@ -2,7 +2,7 @@
 
   <figure itemscope itemtype="http://schema.org/ImageObject" class="ma0">
     <a class="db" href="{{ $.Site.Params.cloudinary }}/t_large-watermark/{{ $albumfolder }}/{{ .Get "file" }}" itemprop="contentUrl" data-size="{{ .Get "size" }}">
-      <img class="lazyload" data-src="{{ $.Site.Params.cloudinary }}/t_thumb/{{ $albumfolder }}/{{ .Get "file" }}" itemprop="thumbnail" alt="{{ .Get "caption" }}">
+      <img class="lazyload" data-src="{{ $.Site.Params.cloudinary }}/t_square2/{{ $albumfolder }}/{{ .Get "file" }}" itemprop="thumbnail" alt="{{ .Get "caption" }}">
       <figcaption itemprop="caption description" class="tc f6 fw2 gray bg-white pa3">
         {{ .Get "caption" }}
       </figcaption>
