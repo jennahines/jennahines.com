@@ -34,8 +34,9 @@
       <nav id="site-nav" class="site-nav" role="navigation" aria-hidden="true" aria-labelledby="site-nav-toggle">
 
         <ul class="site-nav__list mt0 mb0 pl0 list">
+
           {{ range .Site.Menus.main }}
-            <li class="site-nav__item mt3 mb3 {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} site-nav__item--active{{end}}">
+            <li class="site-nav__item mt3 mb3 mh2 {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} site-nav__item--active{{end}}">
               <a class="site-nav__link pa1 ttu bb b--transparent f6" {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}aria-current="page"{{end}} href="{{.URL}}">{{ .Name }}</a>
             </li>
           {{ end }}
