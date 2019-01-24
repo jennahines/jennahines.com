@@ -1,2 +1,12 @@
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.26"
+
+[[redirects]]
+  from = "/contact/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "https://jennahines.netlify.com/*"
+  to = "https://jennahines.com/:splat" 
+  status = 301!
