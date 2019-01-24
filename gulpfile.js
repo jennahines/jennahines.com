@@ -10,7 +10,7 @@ var runSequence = require('run-sequence');
 //var browserSync = require('browser-sync').create();
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
-var gutil = require('gulp-util');
+// var gutil = require('gulp-util');
 
 
 
@@ -24,7 +24,7 @@ var reportError = function (error) {
     sound: 'Sosumi' // See: https://github.com/mikaelbr/node-notifier#all-notification-options-with-their-defaults
   }).write(error);
 
-  gutil.beep();
+  // gutil.beep();
 
   // Pretty error reporting
   var report = '';
