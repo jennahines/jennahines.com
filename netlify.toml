@@ -2,12 +2,12 @@
   HUGO_VERSION = "0.26"
 
 [[redirects]]
-  from = "/contact/"
-  to = "/"
-  status = 301
-
+from = "/contact/"
+to = "/"
+status = 301
+force = false
 [[redirects]]
-  from = "https://jennahines.netlify.com/*"
-  to = "https://jennahines.com/:splat" 
-  status = 301!
-  
+from = "https://jennahines.netlify.com/*"
+to = "https://jennahines.com/:splat"
+status = 301
+force = true
