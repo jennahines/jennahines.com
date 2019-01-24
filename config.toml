@@ -7,3 +7,6 @@ sectionPagesMenu = "main"
 
 [params]
     cloudinary = "https://res.cloudinary.com/jennahines/image/upload"
+
+[taxonomies]
+    category = "categories"

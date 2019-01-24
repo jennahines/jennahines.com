@@ -85,17 +85,10 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
   grid-gap: 1rem;
   justify-items: center;
-  figure {
-    min-height: 300px;  
-  }
   @media #{$breakpoint-not-small} {
-    
     &--archive {
       grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     }
-  }
-  @media #{$breakpoint-medium} {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
   @media screen and (min-width: 1250px) {
     grid-auto-flow: dense;

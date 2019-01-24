@@ -1,5 +1,20 @@
 {{ partial "header.html" . }}
 
 {{ .Content }}
+
+<p class="ttu f6 gray mb0">Posted {{ .Date.Format "January 2, 2006" }}</p>
+{{ if .Params.categories }}
+<p class="ttu f6 gray mb0">
+  Categories:
+  {{ $categories := (.Params.categories) }}
+  {{ $len := (len $categories) }}
+
+  {{range $index, $element := $categories }}
+  <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>{{ if eq (add $index 1) $len }}{{ else }},{{ end }}
+
+  {{end}}
+</p>
+{{end}}
+
  
 {{ partial "footer.html" . }}
