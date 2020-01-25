@@ -15,4 +15,6 @@ featuredimage: 1_dygpby.jpg
 {{% albumfigure file="DSC_5687.jpg" size="1400x996" caption="Adult Dakota" %}}
 {{% albumfigure file="jake-snow.jpg" size="1250x830" caption="Jake in the snow" %}}
 {{% albumfigure file="1_dygpby.jpg" size="1400x930" caption="Brodie" %}}
+{{% albumfigure file="4_ntjlc5.jpg" size="797x1200" caption="Dakota" %}}
+{{% albumfigure file="7_thoi0z.jpg" size="797x1200" caption="Jake" %}}
 {{< /albumwrapper >}}
