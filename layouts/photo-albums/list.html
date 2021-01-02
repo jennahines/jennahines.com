@@ -1,22 +1,24 @@
-{{ partial "header.html" . }}
+{{ define "main" }} {{ $section := .Site.GetPage "section" .Section }}
 
-{{ .Content }}
+  {{ .Content }}
 
-<section class="gallery gallery--archive">
-  {{ range .Data.Pages }}
-    <article role="article">
-      <figure class="ma0 shadow-4">
-        <a class="db gray hover-seagreen" href="{{ .RelPermalink }}">
-          <img class="lazyload" data-src="{{ $.Site.Params.cloudinary }}/t_thumb2/{{ .Params.albumfolder }}/{{ .Params.featuredimage }}" alt="{{ .Title }}">
-          <figcaption class="tc f6 fw2 pa3">
-            {{ .Title }}
-          </figcaption>
-        </a>
-      </figure>
-    </article>
-  {{ end }}
-</section>
+  <section class="gallery gallery--archive">
+    {{ range .Data.Pages }}
+      {{- .Scratch.Set "albumfolder" .Params.albumfolder -}}
+      {{- $albumfolder := .Scratch.Get "albumfolder" -}}
+      <article role="article">
+        <figure class="ma0 shadow-4">
+          <a class="db gray hover-seagreen" href="{{ .RelPermalink }}">
+            <img class="lazyload" data-src="{{ $.Site.Params.cloudinary }}/t_thumb2/{{ $albumfolder }}/{{ .Params.featuredimage }}" alt="{{ .Title }}">
+            <figcaption class="tc f6 fw2 pa3">
+              {{ .Title }}
+            </figcaption>
+          </a>
+        </figure>
+      </article>
+    {{ end }}
+  </section>
 
-{{ partial "lazyload.html" . }}
-{{ partial "footer.html" . }}
+  {{ partial "lazyload.html" . }}
 
+{{ end }}

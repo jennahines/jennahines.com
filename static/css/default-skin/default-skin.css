@@ -271,12 +271,11 @@ a.pswp__share--download:hover {
     color: #BBB; }
 
 .pswp__caption__center {
-  text-align: left;
-  max-width: 420px;
+  text-align: center;
+  max-width: 600px;
   margin: 0 auto;
-  font-size: 13px;
   padding: 10px;
-  line-height: 20px;
+  font-size: .8rem;
   color: #CCC; }
 
 .pswp__caption--empty {

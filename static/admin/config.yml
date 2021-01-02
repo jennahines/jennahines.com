@@ -30,5 +30,5 @@ collections:
         #   allow_add: true
         #   fields:
         #     - {label: "Filename", name: "file", widget: "string"}
-        #     - {label: "Image Size", name: "size", widget: "string", default: "1400x996"}
+        #     - {label: "Image Size", name: "size", widget: "string", default: "1400x933"}
         #     - {label: "Caption", name: "caption", widget: "string"}

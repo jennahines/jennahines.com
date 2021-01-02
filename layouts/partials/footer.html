@@ -1,73 +1,23 @@
-  </main>
+<footer class="site-footer black-40 tracked-tight mb5">
+  <ul class="tc f6 m0 pl0 list">
+    <li class="dib mt1 mb1">
+      <a class="db" href="https://twitter.com/jhines24" target="_blank">
+        <svg width="40" height="40">
+          <use xlink:href="/images/icon-font/brands.svg#twitter"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="dib mt1 mb1">
+      <a class="db" href="https://www.instagram.com/jhines24/" target="_blank">
+        <svg width="40" height="40">
+          <use xlink:href="/images/icon-font/brands.svg#instagram"></use>
+        </svg>
+      </a>
+    </li>
+  </ul>
 
-  <footer class="site-footer black-40 tracked-tight mb5">
-    <ul class="tc f6 m0 pl0 list">
-      <li class="dib mt1 mb1">
-        <a class="db" href="https://twitter.com/jhines24" target="_blank">
-          <svg width="40" height="40">
-            <use xlink:href="/images/icon-font/brands.svg#twitter"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="dib mt1 mb1">
-        <a class="db" href="https://www.instagram.com/jhines24/" target="_blank">
-          <svg width="40" height="40">
-            <use xlink:href="/images/icon-font/brands.svg#instagram"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
+  <p class="tc f6 mb0">
+    &copy; {{ now.Format "2006" }} Copyright Jenna Hines. All rights reservered.
+  </p>
 
-    <p class="tc f6 mb0">
-      &copy; {{ now.Format "2006" }} Copyright Jenna Hines. All rights reservered.
-    </p>
-
-  </footer>
-
-</div> <!-- site-wrapper -->
-
-
-<script>
-
-  const nav = document.querySelector('.site-nav');
-  const toggle = document.querySelector('.site-nav-toggle[aria-expanded]');  
-  const toggleIcon = toggle.querySelector('svg');
-
-  function toggleNav() {
-    const isExpanded = toggle.getAttribute('aria-expanded') === 'true' || false;
-
-    toggle.setAttribute('aria-expanded', !isExpanded);
-    nav.setAttribute('aria-hidden', isExpanded);
-
-    if(isExpanded) {
-      toggleIcon.classList.add('toggle--nav-is-closed');
-      toggleIcon.classList.remove('toggle--nav-is-open');
-      
-    } else {
-      toggleIcon.classList.add('toggle--nav-is-open');
-      toggleIcon.classList.remove('toggle--nav-is-closed');
-      
-    }
-    
-  }
-
-  function desktopNav() {
-    if(window.matchMedia("(min-width: 30em)").matches) {
-      nav.setAttribute('aria-hidden', false);  
-      toggle.setAttribute('aria-hidden', true);
-    }
-    else {
-      nav.setAttribute('aria-hidden', true);
-      toggle.setAttribute('aria-hidden', false);
-    }
-  }
-
-  toggle.addEventListener('click', toggleNav);
-  desktopNav();
-  window.addEventListener('resize', desktopNav)
-
-
-  
-</script>
-</body>
-</html>
+</footer>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  {{ .Hugo.Generator }}
+  <title>{{ .Title }} | Jenna Hines</title>
+  <meta name="description" content="{{ .Description }}" />
+
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1" />
+
+  <link rel="stylesheet" href="/css/master.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+</head>
+
+<body class="ma0 ph0 pv2 sans-serif fw4 darkgray tracked lh-copy bg-nearwhite">
+
+  <a href="#content" class="clip">Skip to main content</a>
+
+  <div class="site-wrapper">
+
+    {{ block "site-header" . }}{{- partial "header.html" . -}}{{ end }}
+
+    <main id="content" class="site-content" role="main">
+      {{ block "main" . }}
+      
+      {{ end }}
+    </main>
+
+    {{ block "site-footer" . }}{{- partial "footer.html" . -}}{{ end }}
+</div> <!-- site-wrapper -->
+
+
+<script>
+
+  const nav = document.querySelector('.site-nav');
+  const toggle = document.querySelector('.site-nav-toggle[aria-expanded]');
+  const toggleIcon = toggle.querySelector('svg');
+
+  function toggleNav() {
+    const isExpanded = toggle.getAttribute('aria-expanded') === 'true' || false;
+
+    toggle.setAttribute('aria-expanded', !isExpanded);
+    nav.setAttribute('aria-hidden', isExpanded);
+
+    if (isExpanded) {
+      toggleIcon.classList.add('toggle--nav-is-closed');
+      toggleIcon.classList.remove('toggle--nav-is-open');
+
+    } else {
+      toggleIcon.classList.add('toggle--nav-is-open');
+      toggleIcon.classList.remove('toggle--nav-is-closed');
+
+    }
+
+  }
+
+  function desktopNav() {
+    if (window.matchMedia("(min-width: 30em)").matches) {
+      nav.setAttribute('aria-hidden', false);
+      toggle.setAttribute('aria-hidden', true);
+    }
+    else {
+      nav.setAttribute('aria-hidden', true);
+      toggle.setAttribute('aria-hidden', false);
+    }
+  }
+
+  toggle.addEventListener('click', toggleNav);
+  desktopNav();
+  window.addEventListener('resize', desktopNav)
+
+
+
+</script>
+</body>
+
+</html>

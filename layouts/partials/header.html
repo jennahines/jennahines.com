@@ -1,53 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<header class="site-header bg-nearwhite" role="banner">
 
-<head>
-  <meta charset="UTF-8">
-  {{ .Hugo.Generator }}
-  <title>{{ .Page.Title }} | Jenna Hines</title>
-  <meta name="description" content="{{ .Page.Description }}" />
-
-  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, user-scalable=1" />
+  <a href="/" class="site-logo">{{ partial "jh-logo.svg" }}</a>
   
-  <link rel="stylesheet" href="/css/master.css">
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  
-</head>
-<body class="ma0 ph0 pv2 sans-serif fw4 darkgray tracked lh-copy bg-nearwhite">
+  <a id="site-nav-toggle" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" aria-hidden="false">
+    <span aria-hidden="true">
+      <svg class="toggle toggle--nav-is-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
+        <line class="toggle__line toggle__line--top" x1="3" y1="10" x2="37" y2="10"></line>
+        <line class="toggle__line toggle__line--middle" x1="3" y1="20" x2="37" y2="20"></line>
+        <line class="toggle__line toggle__line--bottom" x1="3" y1="30" x2="37" y2="30"></line>
+      </svg>
+    </span>
+  </a>
 
-  <a href="#content" class="clip">Skip to main content</a>
+  <nav id="site-nav" class="site-nav" role="navigation" aria-hidden="true" aria-labelledby="site-nav-toggle">
 
-  <div class="site-wrapper">
+    <ul class="site-nav__list mt0 mb0 pl0 list">
 
-    <header class="site-header bg-nearwhite" role="banner">
+      {{ range .Site.Menus.main }}
+        <li class="site-nav__item mt3 mb3 mh2 {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} site-nav__item--active{{end}}">
+          <a class="site-nav__link pa1 ttu bb b--transparent f6" {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}aria-current="page"{{end}} href="{{.URL}}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
 
-      <a href="/" class="site-logo">{{ readFile "public/images/jh-logo.svg" | safeHTML }}</a>
-      
-      <a id="site-nav-toggle" class="site-nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav" aria-hidden="false">
-        <span aria-hidden="true">
-          <svg class="toggle toggle--nav-is-closed" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" width="40" height="40">
-            <line class="toggle__line toggle__line--top" x1="3" y1="10" x2="37" y2="10"></line>
-            <line class="toggle__line toggle__line--middle" x1="3" y1="20" x2="37" y2="20"></line>
-            <line class="toggle__line toggle__line--bottom" x1="3" y1="30" x2="37" y2="30"></line>
-          </svg>
-        </span>
-      </a>
+  </nav>
 
-      <nav id="site-nav" class="site-nav" role="navigation" aria-hidden="true" aria-labelledby="site-nav-toggle">
-
-        <ul class="site-nav__list mt0 mb0 pl0 list">
-
-          {{ range .Site.Menus.main }}
-            <li class="site-nav__item mt3 mb3 mh2 {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} site-nav__item--active{{end}}">
-              <a class="site-nav__link pa1 ttu bb b--transparent f6" {{if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}aria-current="page"{{end}} href="{{.URL}}">{{ .Name }}</a>
-            </li>
-          {{ end }}
-        </ul>
-
-      </nav>
-
-
-    </header>
-    
-
-    <main id="content" class="site-content" role="main"> 
+</header>
