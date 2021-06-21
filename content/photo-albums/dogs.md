@@ -10,6 +10,8 @@ featuredimage = "1_dygpby.jpg"
     >}}
 {{< albumwrapper >}}
 
+{{% albumfigure file="9FAD5366-4C37-4875-9FAA-4C7B98F4FAD5.jpg" size="1400x1400" caption="Holly (foster) - June 2021" %}}
+{{% albumfigure file="IMG_3225.jpg" size="1537x2049" caption="Bernard - May 2021" %}}
 {{% albumfigure file="DSC_8392.jpg" size="1400x933" caption="Bernard - December 2020" %}}
 {{% albumfigure file="IMG_0189.jpg" size="1537x2049" caption="Cookie - December 2020" %}}
 {{% albumfigure file="DSC_8431.jpg" size="1400x933" caption="Cookie & Bernard - December 2020" %}}

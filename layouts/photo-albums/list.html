@@ -9,7 +9,7 @@
       <article role="article">
         <figure class="ma0 shadow-4">
           <a class="db gray hover-seagreen" href="{{ .RelPermalink }}">
-            <img class="lazyload" data-src="{{ $.Site.Params.cloudinary }}/t_thumb2/{{ $albumfolder }}/{{ .Params.featuredimage }}" alt="{{ .Title }}">
+            <img class="lazyload h-auto" data-src="{{ $.Site.Params.cloudinary }}/t_thumb2/{{ $albumfolder }}/{{ .Params.featuredimage }}" alt="{{ .Title }}" width="600" height="400">
             <figcaption class="tc f6 fw2 pa3">
               {{ .Title }}
             </figcaption>
